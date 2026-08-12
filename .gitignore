@@ -1,0 +1,35 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+#data
+data/*.pdf                # Documents (may contain sensitive info)
+data/*.docx
+data/*.pptx
+logs/*.log  
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Vector Database
+vector_db/
+
+# Logs
+logs/
+*.log
+
+# Environment Variables (optional - see note below)
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

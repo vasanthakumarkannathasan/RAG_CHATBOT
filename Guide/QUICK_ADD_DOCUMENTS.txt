@@ -1,0 +1,143 @@
+╔════════════════════════════════════════════════════════════════════════╗
+║                                                                        ║
+║           📚 QUICK GUIDE: Add New PDF Documents                        ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════════════
+                    🚀 FASTEST METHOD (One Command)
+═══════════════════════════════════════════════════════════════════════════
+
+1. Run this PowerShell script:
+   
+   .\ADD_DOCUMENTS.ps1
+
+2. Follow the prompts:
+   • Select folder with your PDFs
+   • Confirm to copy files
+   • Confirm to index
+
+3. Done! Your documents are searchable! ✅
+
+═══════════════════════════════════════════════════════════════════════════
+                    📋 MANUAL METHOD (3 Steps)
+═══════════════════════════════════════════════════════════════════════════
+
+STEP 1: Copy PDFs to data folder
+──────────────────────────────────────────────────────────────────────────
+   Location: C:\Personal\AI_Roadmap\RAG\Projects\Enterprise-RAG\data\
+   
+   Copy your PDF files into this folder using Windows Explorer.
+
+STEP 2: Run indexing script
+──────────────────────────────────────────────────────────────────────────
+   python index_documents.py
+   
+   Or:
+   
+   c:/Personal/AI_Roadmap/RAG/Projects/Enterprise-RAG/.venv/Scripts/python.exe index_documents.py
+
+STEP 3: Start using your documents
+──────────────────────────────────────────────────────────────────────────
+   1. Start server: .\START_SERVER.ps1
+   2. Open: http://127.0.0.1:8000/static/index.html
+   3. Ask questions!
+
+═══════════════════════════════════════════════════════════════════════════
+                    🌐 API METHOD (If Server Running)
+═══════════════════════════════════════════════════════════════════════════
+
+1. Add PDFs to data/ folder
+
+2. Trigger indexing via API:
+   
+   curl -X POST http://127.0.0.1:8000/api/v1/index
+
+3. Verify:
+   
+   curl http://127.0.0.1:8000/api/v1/database
+
+═══════════════════════════════════════════════════════════════════════════
+                    📊 CHECK WHAT'S INDEXED
+═══════════════════════════════════════════════════════════════════════════
+
+Method 1: Via Script
+   python inspect_database.py
+
+Method 2: Via API (server must be running)
+   curl http://127.0.0.1:8000/api/v1/database
+
+Method 3: Via Web UI
+   http://127.0.0.1:8000/docs
+   → GET /api/v1/database → Try it out → Execute
+
+═══════════════════════════════════════════════════════════════════════════
+                    🔄 CLEAR DATABASE (Start Fresh)
+═══════════════════════════════════════════════════════════════════════════
+
+Option 1: Via Script
+   python reset_database.py
+
+Option 2: Via API
+   curl -X DELETE http://127.0.0.1:8000/api/v1/database
+
+After clearing, re-index all documents:
+   python index_documents.py
+
+═══════════════════════════════════════════════════════════════════════════
+                    ⚡ EXAMPLE WORKFLOW
+═══════════════════════════════════════════════════════════════════════════
+
+Scenario: Adding company documentation
+
+1. Copy files:
+   Copy-Item "C:\Company\Docs\*.pdf" -Destination "data\"
+
+2. Index:
+   python index_documents.py
+
+3. Start server:
+   .\START_SERVER.ps1
+
+4. Ask questions:
+   "What are our company policies on remote work?"
+   "How do I submit expense reports?"
+   "What is our security protocol?"
+
+═══════════════════════════════════════════════════════════════════════════
+                    📁 SUPPORTED FILES
+═══════════════════════════════════════════════════════════════════════════
+
+✅ Supported: PDF files (.pdf)
+❌ Not supported: Word docs, Excel, images, etc.
+
+Note: PDFs must contain extractable text (not scanned images).
+
+═══════════════════════════════════════════════════════════════════════════
+                    💡 TIPS
+═══════════════════════════════════════════════════════════════════════════
+
+• Keep PDFs organized in data/ folder
+• Index after adding multiple files (more efficient)
+• First indexing takes longer (loading models)
+• Subsequent indexing is faster
+• Clear database if you want to start fresh
+• Check logs if indexing fails: logs/application.log
+
+═══════════════════════════════════════════════════════════════════════════
+                    🎯 QUICK REFERENCE
+═══════════════════════════════════════════════════════════════════════════
+
+Add & Index (Easy):        .\ADD_DOCUMENTS.ps1
+Index Only:                python index_documents.py
+Check Database:            python inspect_database.py
+Clear Database:            python reset_database.py
+Start Server:              .\START_SERVER.ps1
+Web Interface:             http://127.0.0.1:8000/static/index.html
+API Docs:                  http://127.0.0.1:8000/docs
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎉 That's it! Your RAG system will learn from your new documents!
+
+For detailed instructions, see: HOW_TO_ADD_DOCUMENTS.md
