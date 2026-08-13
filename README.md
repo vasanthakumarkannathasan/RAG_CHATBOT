@@ -185,7 +185,10 @@ RAG_CHATBOT/
 ├── vector_db/                   # ChromaDB storage (gitignored)
 ├── logs/                        # Application logs (gitignored)
 ├── tests/                       # Test files
-└── Guide/                       # Documentation
+└── docs/                        # Documentation
+    ├── README.md                # Documentation index
+    ├── Technical Reports/       # Build, validation, and system reports
+    └── Guide/                   # User and developer guides
 ```
 
 ---
@@ -254,18 +257,24 @@ python system_check.py
 
 ## 📖 Documentation
 
+📚 **[Complete Documentation](docs/README.md)** - All documentation organized in one place
+
 ### User Guides
 
-- **[Multi-Format Support](MULTI_FORMAT_SUPPORT.md)** - PDF, Word, PowerPoint support
-- **[Document Deletion Guide](DOCUMENT_DELETION_GUIDE.md)** - Managing documents and auto-sync
-- **[New Features Guide](Guide/NEW_FEATURES_GUIDE.md)** - Upload UI, document list, deduplication
-- **[Browser Access](BROWSER_ACCESS.md)** - How to use the web interface
+- **[Browser Access](docs/Guide/BROWSER_ACCESS.md)** - How to use the web interface
+- **[Multi-Format Support](docs/Guide/MULTI_FORMAT_SUPPORT.md)** - PDF, Word, PowerPoint support
+- **[How to Add Documents](docs/Guide/HOW_TO_ADD_DOCUMENTS.md)** - Document upload and indexing
+- **[Document Deletion Guide](docs/Guide/DOCUMENT_DELETION_GUIDE.md)** - Managing documents and auto-sync
+- **[New Features Guide](docs/Guide/NEW_FEATURES_GUIDE.md)** - Upload UI, document list, deduplication
+- **[Shutdown Button Guide](docs/Guide/SHUTDOWN_BUTTON_GUIDE.md)** - Server control from UI
 
-### Developer Guides
+### Technical Reports
 
-- **[API Documentation](Guide/GUIDE_API.py)** - Complete API reference
-- **[Code Flow](Guide/CODE_FLOW_AFTER_STANDARDIZATION.py)** - System architecture
-- **[Standardized Format](Guide/STANDARDIZED_FORMAT_GUIDE.py)** - API response format
+- **[Build Report](docs/BUILD_REPORT.md)** - Complete build verification and component validation
+- **[Service Validation](docs/SERVICE_VALIDATION_REPORT.md)** - Service files validation results
+- **[Logging Summary](docs/LOGGING_SUMMARY.md)** - Logging implementation details
+- **[Test Redesign](docs/TEST_REDESIGN_SUMMARY.md)** - Test suite organization
+- **[Cleanup Summary](docs/CLEANUP_SUMMARY.md)** - Project optimization history
 
 ---
 
@@ -390,7 +399,7 @@ Built with:
 
 For issues, questions, or suggestions:
 - Open an issue on GitHub
-- Check existing documentation in `Guide/` folder
+- Check documentation in the [`docs/`](docs/) folder
 - Review troubleshooting section above
 
 ---
