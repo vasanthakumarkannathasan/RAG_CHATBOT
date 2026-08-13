@@ -2,6 +2,21 @@
 
 AI-powered document Q&A system with multi-format support (PDF, Word, PowerPoint).
 
+---
+
+## 🎯 New Users Start Here!
+
+**📦 Just downloaded or cloned this repository?**
+
+Choose your guide:
+
+- **⚡ [QUICK START →](QUICK_START.md)** - Get running in 5 minutes
+- **📖 [INSTALLATION GUIDE →](INSTALLATION.md)** - Complete step-by-step instructions with troubleshooting
+
+**Already have it running?** Continue reading below for features and usage.
+
+---
+
 ## ✨ Features
 
 - 🤖 **Intelligent Document Q&A** - Ask questions and get answers from your documents
@@ -34,6 +49,8 @@ Before you begin, ensure you have:
 ---
 
 ## 🚀 Quick Start
+
+**For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md)**
 
 ### 1. Clone the Repository
 
@@ -91,6 +108,8 @@ python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 http://127.0.0.1:8000/static/index.html
 ```
+
+**📘 For troubleshooting and detailed setup, see [INSTALLATION.md](INSTALLATION.md)**
 
 ---
 
