@@ -12,6 +12,7 @@ Choose your guide:
 
 - **⚡ [QUICK START →](QUICK_START.md)** - Get running in 5 minutes
 - **📖 [INSTALLATION GUIDE →](INSTALLATION.md)** - Complete step-by-step instructions with troubleshooting
+- **🏗️ [ARCHITECTURE →](docs/Guide/ARCHITECTURE.md)** - Understand the system design and components
 
 **Already have it running?** Continue reading below for features and usage.
 
@@ -141,6 +142,10 @@ http://127.0.0.1:8000/static/index.html
 
 ## 🏗️ Architecture
 
+**📐 [Detailed Architecture Documentation →](docs/Guide/ARCHITECTURE.md)** - Complete system architecture explanation
+
+### High-Level Overview
+
 ```
 ┌─────────────────────────────────────────────┐
 │           Web Browser (UI)                   │
@@ -171,6 +176,25 @@ http://127.0.0.1:8000/static/index.html
 │  └────────────┴─────────────┴────────────┘ │
 └─────────────────────────────────────────────┘
 ```
+
+### Architecture Highlights
+
+- **3-Tier Layered Architecture**: Presentation → API → Service → Data
+- **Service-Oriented Design**: 11 specialized services with single responsibilities
+- **RAG Pipeline**: Document ingestion → Chunking → Embedding → Vector search → LLM generation
+- **Conversation Memory**: Session-based multi-turn dialog support
+- **Multi-Format Support**: PDF, Word, PowerPoint document processing
+- **Production Features**: SHA-256 deduplication, orphan cleanup, error handling
+
+**📖 For complete architecture details including:**
+- Layered architecture breakdown
+- Core RAG pipeline flows
+- Design patterns used
+- Data flow diagrams
+- Scalability considerations
+- All 12 API endpoints documentation
+
+**👉 See [ARCHITECTURE.md](docs/Guide/ARCHITECTURE.md)**
 
 ---
 
@@ -372,7 +396,11 @@ Get-Content logs\application.log | Select-String "completed in"
 ## �📖 Documentation
 
 📚 **[Complete Documentation](docs/README.md)** - All documentation organized in one place
+### Core Documentation
 
+- **[ARCHITECTURE.md](docs/Guide/ARCHITECTURE.md)** - ⭐ **Detailed System Architecture** - Complete 3-tier architecture explanation, RAG pipeline, design patterns, and scalability
+- **[INSTALLATION.md](INSTALLATION.md)** - Complete step-by-step installation guide
+- **[QUICK_START.md](QUICK_START.md)** - Get running in 5 minutes
 ### User Guides
 
 - **[Browser Access](docs/Guide/BROWSER_ACCESS.md)** - How to use the web interface
@@ -477,6 +505,29 @@ ollama pull tinyllama
 ---
 
 ## 🆕 Recent Updates
+
+### Version 1.0.1 (2026-08-20)
+
+**New Documentation:**
+
+1. **🏗️ Detailed Architecture Documentation (ARCHITECTURE.md)**
+   - Complete 3-tier layered architecture explanation
+   - Core RAG pipeline flow diagrams (Indexing & Query phases)
+   - All 11 service components detailed
+   - Design patterns used (Service Layer, Repository, Strategy, Decorator, Factory)
+   - Data flow architecture (indexing, query, conversation memory)
+   - Technology stack breakdown
+   - Scalability considerations and scaling path
+   - All 12 API endpoints fully documented
+   - Key architectural decisions with rationale
+   - Error handling strategy (3-level approach)
+   - Future enhancements roadmap
+
+2. **✅ Workflow Verification**
+   - Fixed conversation history integration (API → Service → Prompt Builder)
+   - Fixed index endpoint to return detailed statistics
+   - Created comprehensive workflow verification documents
+   - Added test suite for complete end-to-end workflow
 
 ### Version 1.0.0 (2026-08-13)
 

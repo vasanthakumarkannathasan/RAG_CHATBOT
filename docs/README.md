@@ -10,11 +10,14 @@ Welcome to the Enterprise RAG documentation center. All project documentation is
 
 | Document | Description |
 |----------|-------------|
-| [BUILD_REPORT.md](BUILD_REPORT.md) | Complete build verification and component validation |
-| [SERVICE_VALIDATION_REPORT.md](SERVICE_VALIDATION_REPORT.md) | Comprehensive service files validation results |
-| [LOGGING_SUMMARY.md](LOGGING_SUMMARY.md) | Logging implementation details and coverage |
-| [TEST_REDESIGN_SUMMARY.md](TEST_REDESIGN_SUMMARY.md) | Test suite redesign and organization |
-| [CLEANUP_SUMMARY.md](CLEANUP_SUMMARY.md) | Project cleanup and optimization summary |
+| [Guide/ARCHITECTURE.md](Guide/ARCHITECTURE.md) | ⭐ **Detailed System Architecture** - Complete 3-tier architecture, RAG pipeline, design patterns, and scalability |
+| [Reports/BUILD_REPORT.md](Reports/BUILD_REPORT.md) | Complete build verification and component validation |
+| [Reports/SERVICE_VALIDATION_REPORT.md](Reports/SERVICE_VALIDATION_REPORT.md) | Comprehensive service files validation results |
+| [Reports/LOGGING_SUMMARY.md](Reports/LOGGING_SUMMARY.md) | Logging implementation details and coverage |
+| [Reports/TEST_REDESIGN_SUMMARY.md](Reports/TEST_REDESIGN_SUMMARY.md) | Test suite redesign and organization |
+| [Reports/CLEANUP_SUMMARY.md](Reports/CLEANUP_SUMMARY.md) | Project cleanup and optimization summary |
+| [Reports/COMPLETE_WORKFLOW_VERIFICATION.md](Reports/COMPLETE_WORKFLOW_VERIFICATION.md) | Complete workflow verification with fixes |
+| [Reports/WORKFLOW_VERIFICATION_SUMMARY.md](Reports/WORKFLOW_VERIFICATION_SUMMARY.md) | Workflow verification summary and results |
 
 ### 📘 **User Guides**
 
@@ -36,15 +39,18 @@ Welcome to the Enterprise RAG documentation center. All project documentation is
 docs/
 ├── README.md (this file)
 │
-├── Technical Reports/
+├── Reports/                                      ⭐ Technical Reports
 │   ├── BUILD_REPORT.md
 │   ├── SERVICE_VALIDATION_REPORT.md
 │   ├── LOGGING_SUMMARY.md
 │   ├── TEST_REDESIGN_SUMMARY.md
-│   └── CLEANUP_SUMMARY.md
+│   ├── CLEANUP_SUMMARY.md
+│   ├── COMPLETE_WORKFLOW_VERIFICATION.md
+│   └── WORKFLOW_VERIFICATION_SUMMARY.md
 │
-└── Guide/
+└── Guide/                                        ⭐ User Guides & Architecture
     ├── README.md
+    ├── ARCHITECTURE.md ⭐ (Detailed System Architecture)
     ├── BROWSER_ACCESS.md
     ├── DOCUMENT_DELETION_GUIDE.md
     ├── HOW_TO_ADD_DOCUMENTS.md
@@ -61,19 +67,21 @@ docs/
 Start with the [User Guides](#-user-guides) section to learn how to use the application.
 
 ### For Developers:
-Check the [Technical Reports](#-technical-reports) for system architecture and validation details.
+- **System Architecture**: See [Guide/ARCHITECTURE.md](Guide/ARCHITECTURE.md) for complete system design
+- **Technical Reports**: Check the [Technical Reports](#-technical-reports) for validation details
 
 ### For Deployment:
-See [BUILD_REPORT.md](BUILD_REPORT.md) for deployment instructions and system requirements.
+See [Reports/BUILD_REPORT.md](Reports/BUILD_REPORT.md) for deployment instructions and system requirements.
 
 ---
 
 ## 📊 Quick Stats
 
-- **Total Documentation Files:** 12
-- **Technical Reports:** 5
-- **User Guides:** 7
-- **Last Updated:** 2026-08-13
+- **Total Documentation Files:** 15
+- **Technical Reports:** 8 (in Reports/ folder)
+- **User Guides:** 8 (in Guide/ folder, including ARCHITECTURE.md)
+- **Documentation Index Files:** 2 (docs/README.md, Guide/README.md)
+- **Last Updated:** 2026-08-20
 
 ---
 

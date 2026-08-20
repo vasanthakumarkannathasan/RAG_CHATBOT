@@ -4,6 +4,9 @@ This folder contains comprehensive documentation, guides, and verification repor
 
 ## 📚 Documentation Files
 
+### Core Architecture & System Design
+- **ARCHITECTURE.md** - ⭐ **Complete System Architecture** - Detailed 3-tier architecture, RAG pipeline flows, design patterns, scalability, and all API endpoints
+
 ### API & Architecture Guides
 - **GUIDE_API.py** - Complete API endpoint documentation and usage examples
 - **GUIDE_MEMORY.py** - Conversation memory system documentation
