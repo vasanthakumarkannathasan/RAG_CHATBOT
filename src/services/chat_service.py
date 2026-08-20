@@ -10,6 +10,7 @@ def chat(
     question: str,
     source: str | None = None,
     session_id: str | None = None,
+    conversation_history: list[dict] | None = None,
 ):
     try:
         logger.info(f"Chat request - Question: '{question[:50]}...', Source: {source}, Session: {session_id}")
@@ -23,7 +24,8 @@ def chat(
 
         prompt = build_prompt(
             question=question,
-            documents=documents
+            documents=documents,
+            conversation_history=conversation_history
         )
         
         logger.info(f"Built prompt with {len(prompt)} characters")

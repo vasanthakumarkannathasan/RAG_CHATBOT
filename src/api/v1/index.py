@@ -8,11 +8,9 @@ router = APIRouter(
 
 @router.post("")
 def index_documents():
-    index_directory()
+    result = index_directory()
     return {
         "success": True,
         "message": "Documents indexed successfully",
-        "data": {
-            "indexed": True
-        }
+        "data": result
     }

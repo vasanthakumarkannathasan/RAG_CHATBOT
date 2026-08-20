@@ -60,7 +60,8 @@ async def chat_endpoint(request: ChatRequest):
         result = chat(
             question=request.question,
             source=request.source,
-            session_id=session_id
+            session_id=session_id,
+            conversation_history=conversation_history
         )
         
         # Add assistant response to memory
